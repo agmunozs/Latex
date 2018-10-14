@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 # Author: Jeff Turmelle (jeff@iri.columbia.edu)
-# with minimum modifications from Angel G Munoz
+# with some modifications from Angel G Munoz
 #
 # Parse a CSV for
 # Email, Title, First, Second, Position, Institution, Country, Paid

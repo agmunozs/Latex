@@ -1,0 +1,87 @@
+\documentclass[
+  fontsize=12pt,
+  paper=a4,
+   headsepline=false,
+  footsepline=true,
+  parskip=full, %False for paragraph first line indent
+  firsthead=true, %This option determines whether the letterhead will be typeset at all  
+  enlargefirstpage=on,    % More space on first page
+  fromalign=right,        % PLacement of name in letter head
+  fromphone=off,           % Turn on phone number of sender
+  fromrule=false, %aftername,     % Rule after sender name in letter head
+  fromemail=true,           % <===========================================
+  addrfield=true,           % Adress field for envelope with window
+  backaddress=true,         % Sender address in this window
+  addrfield=true,
+  backaddress=false, %Delete if not window enveloppe <--
+  %--Subject------
+  subject=beforeopening,
+  subject=left,
+  subject=titled, % locfield=narrow,        % Additional field for sender
+  foldmarks=on,           % Print foldmarks
+]{scrlttr2}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx} 
+   
+
+\setkomafont{fromname}{\bfseries} %{\sffamily \LARGE}
+\setkomafont{fromaddress}{\sffamily}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\bfseries}
+\setkomafont{backaddress}{\mdseries}
+
+%\LoadLetterOption{DIN}
+%\LoadLetterOption{SN} %Swiss Letter standards
+
+\setkomavar{fromname}{\'Angel G. Mu\~noz}
+\setkomavar{fromaddress}{International Research Institute for Climate and Society (IRI) \\ Columbia University}
+\setkomavar{fromphone}{+39 \,00\,00\,00\,000}
+\setkomavar{fromemail}{goodboy@foo.com} % NON VIENE VISUALIZZATA
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{signature}{\'Angel G. Mu\~noz, PhD \\ International Research Institute for Climate 
+and Society (IRI)\\ The Earth Institute at Columbia University \\ 61 Route 9W, Monell Building. Office 228. Palisades, NY 10964-1000 \\
+Phone: +1 (845) 680-4453}
+\setkomavar{place}{New York}
+\setkomavar{date}{\today}
+\setkomavar{enclseparator}{: }
+\setkomavar{toname}{SOMEBODY in toname}
+\renewcommand{\raggedsignature}{\raggedright} % make the signature ragged right
+
+
+\begin{document}
+    \KOMAoptions{fromlogo=true}
+    \setkomavar{fromlogo}{\includegraphics[width=6in,height=2cm]{logos}}
+   \firsthead{\centering\usekomavar{fromlogo}}
+  \begin{letter}{{SOMEBODY\\INSTITUTE\\COUNTRY}}
+    \setkomavar{subject}{Central American and Caribbean Workshop on S2S Predictability of the Mid-Summer Drought}
+    \opening{Dear SOMEBODY,}
+    Congratulations! I am writing to let you know that your application has been accepted and that INSTITUTION 
+    will contact you directly in the next few days to provide additional information regarding  financial support (as requested in the application 
+    form).
+    
+    Please do not hesitate in contacting me or Mrs. Pamela Jordan (pamela@iri.columbia.edu) if you have any questions.
+   
+
+\closing{On behalf of the Organizing Committee, sincerely,\\ \vspace{1cm} {\includegraphics[width=2in,height=1.8cm]{firmaAngel}}}
+
+      \end{letter}
+\end{document}
+
+
+%\documentclass[demo,english]{scrlttr2}
+%\usepackage{babel,graphicx}
+%\begin{document}
+  % \KOMAoptions{fromlogo=true}
+   %\setkomavar{fromname}{Central American and Caribbean Workshop on S2S Predictability of the Mid-Summer Drought}
+   %\setkomavar{fromaddress}{Here}
+    %\setkomavar{paidby}{paidby}
+   %\setkomavar{fromlogo}{\includegraphics[width=7in,height=3cm]{logos}}
+   %\firsthead{\centering\usekomavar{fromlogo}}
+   %\begin{letter}{You\\There}
+     %\opening{Cheers,}
+%Hi
+    % \closing{cu}
+   %\end{letter}{The Organizing Committee}
+%\end{document}
